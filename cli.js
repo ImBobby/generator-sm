@@ -2,11 +2,14 @@
 'use strict'
 
 const fs = require('fs')
+const helper = require('./helper.js')
 
 const pwd = process.env.PWD
 const moduleName = process.argv[2]
 const modulePath = `${pwd}/dev/sass/modules/`
 const moduleFile = `${modulePath}_modules.scss`
+const generatedFile = helper.create(moduleName)
+const appendedContent = helper.append(moduleName)
 
 if (!moduleName) {
     console.log('No module name specified')
@@ -19,14 +22,9 @@ fs.readFile(moduleFile, 'utf8', (err, data) => {
         process.exit(1)
     }
 
-    data += `\n@import "${moduleName}";`
-    
-    fs.writeFile(`${modulePath}_${moduleName}.scss`, '', err => {
-        if (err) throw err
+    data += appendedContent
 
-        fs.writeFile(moduleFile, data, err => {
-            if (err) throw err
-            console.log(`Module _${moduleName}.scss has been created`)
-        })
-    })
+    helper.write(`${modulePath}${generatedFile}`)
+    helper.updateModule(moduleFile, data)
+    console.log(`Module ${generatedFile} has been created`)
 })
