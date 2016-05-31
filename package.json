@@ -1,0 +1,13 @@
+{
+  "name": "suit-baze-scss-module",
+  "version": "1.0.0",
+  "description": "A module generator for Suit-baze SCSS modules",
+  "lisence": "MIT",
+  "repository": "https://github.com/ImBobby/suit-baze-scss-module",
+  "author": {
+    "name": "Bobby"
+  },
+  "bin": {
+    "sm": "./cli.js"
+  }
+}
