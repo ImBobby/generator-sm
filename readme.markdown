@@ -21,3 +21,10 @@ sm header
 File `_header.scss` will be created in `dev/sass/modules` and file `_modules.scss` will automatically import `_header.scss`
 
 **`sm` will look for directory `dev/sass/modules` so make sure to run this command where that directory placed.**
+
+## Test
+
+1. Clone this repo to local machine
+2. `cd` into directory
+3. run `npm i`
+4. run `npm test`
