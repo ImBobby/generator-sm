@@ -2,12 +2,20 @@
   "name": "suit-baze-scss-module",
   "version": "1.1.0",
   "description": "A module generator for Suit-baze SCSS modules",
-  "licence": "MIT",
+  "license": "MIT",
   "repository": "https://github.com/ImBobby/suit-baze-scss-module",
   "author": {
     "name": "Bobby"
   },
   "bin": {
     "sm": "./cli.js"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "nodeunit": "^0.9.1",
+    "rimraf": "^2.5.2"
+  },
+  "scripts": {
+    "test": "nodeunit test.js"
   }
 }
