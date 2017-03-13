@@ -4,7 +4,7 @@
 const fs = require('fs')
 const helper = require('./helper.js')
 
-const pwd = process.env.PWD
+const pwd = process.env.PWD || process.cwd()
 const moduleName = process.argv[2]
 const modulePath = `${pwd}/dev/sass/modules/`
 const moduleFile = `${modulePath}_modules.scss`
