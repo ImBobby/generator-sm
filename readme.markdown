@@ -1,5 +1,7 @@
 # Suit-baze SCSS module
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ImBobby/suit-baze-scss-module.svg)](https://greenkeeper.io/)
+
 A file generator to create SCSS module file for [Suit-baze](https://github.com/ImBobby/suit-baze)
 
 Requirement:
